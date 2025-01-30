@@ -1,0 +1,274 @@
+.login__containre {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    backdrop-filter: blur(7.8px);
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gras-background {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    flex-direction: column;
+    bottom: 0px;
+    z-index: 5;
+    overflow: hidden;
+    .gras {
+        height: 50px;
+        position: relative;
+        display: flex;
+        bottom: 0;
+        z-index: 5;
+        /* background: url('/imgs/grass.png'); */
+        background: url('/imgs/grass-animee.png');
+        background-position: start;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .land {
+        position: relative;
+        height: 50px;
+        bottom: -70px;
+        border-radius: 40%;
+        background-color: #867040;
+        z-index: 2;
+    }
+}
+
+.img-background {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0px;
+    }
+}
+
+.logo {
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 80%;
+        max-width: 700px;
+    }
+}
+
+.login__card {
+    max-width: 90%;
+    border: 5px solid #638bae;
+    border-radius: 20px;
+    background-color: #ffffff;
+    .card-text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1rem 1rem 2rem;
+        font-weight: 800;
+        color: #918c92;
+        border: 3px solid #99bcdd;
+        border-radius: 10px;
+    }
+    .button-transparent {
+        position: absolute;
+        padding: 0 15px;
+        border: 3px solid #918c92;
+        border-radius: 5px;
+        background-color: transparent;
+        scale: .6;
+    }
+    .b-left {
+        bottom: 5px;
+        right: 10px;
+    }
+    .b-right {
+        bottom: 5px;
+        right: 50px;
+    }
+}
+
+.form_username {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background:  transparent;
+    z-index: 3;
+    .input {
+        background-color: #f1e8e84b;
+        border: 1ex solid none;
+        /* border-top-width: 1.7em; */
+        margin: 0;
+        padding: 0;
+        color: #e2e2e2;
+        word-wrap: break-word;
+        outline: 7px solid #3760aa;
+        height: 30px;
+        font-size: 17px;
+        text-align: center;
+        transition: all .5s;
+        max-width: 250px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        &:hover {
+            /* border-top-width: 0.2em; */
+            background-color: #f1e8e8;
+        }
+        &:focus {
+            color: #012838;
+            background-color: #f1e8e8;
+        }
+    }
+
+    button {
+        border: 1ex solid #012838;
+        border-top-width: 1.7em;
+        outline: 7px solid #3760aa;
+        background-color: #f1e8e84b;
+        border: none;
+        i {
+            font-size: 29px;
+            font-weight: 800;
+        }
+    }
+    
+  
+}
+
+.pokemon__container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    max-width: 1024px;
+    position: absolute;
+    z-index: 0;
+}
+
+/* pokemons  */
+.bulbasaur {
+    position: absolute;
+    width: 130px;
+    bottom: 3%;
+    transform: rotate(10deg);
+    left: 38%;
+    z-index: 3;
+}
+
+.charmeleon {
+    position: absolute;
+    width: 130px;
+    transform: rotate(-10deg);
+    bottom: 3%;
+    left: 10%;
+}
+
+.esqueerow {
+    position: absolute;
+    width: 130px;
+    transform: rotatey(-180deg) rotate(-10deg);
+    bottom: 3%;
+    right: 10%;
+    z-index: 1;
+}
+/* .ash-quepchup {
+    width: 110px;
+    position: absolute;
+    rotate: 25deg;
+    bottom: 20%;
+    left: 30%;
+    z-index: 1;
+} */
+.meow {
+    position: absolute;
+    rotate: 30deg;
+    width: 150px;
+    top: 9%;
+    left: -5%;
+}
+.picachu {
+    width: 150px;
+    position: absolute;
+    bottom: 20%;
+    left: 36%;
+    z-index: 2;
+}
+
+@media ( width >= 768px )  {
+    .gras-background {
+        .gras {
+            height: 110px;
+            bottom: 0px;
+        }
+        .land {
+            display: none;
+        }
+    }
+    .logo {
+        top: 10%;
+        img {
+            width: 70%;
+        }
+    }
+
+    /* pokemons */
+    .meow {
+        width: 200px;
+        top: 5%;
+        left: 5%;
+    }
+    .picachu {
+        width: 180px;
+        bottom: 20%;
+    }
+    .bulbasaur {
+        width: 150px;
+        left: 40%;
+    }
+    
+    .charmeleon {
+        width: 150px;
+        left: 15%;
+    }
+    
+    .esqueerow {
+        width: 150px;
+        right: 18%;
+    }
+}
+
+@media ( width >= 1024px )  {
+    .gras-background {
+        .gras {
+            /* background-color: red; */
+            height: 100px;
+            bottom: 50px;
+        }
+        .land {
+            display: block;
+            background-color: rgb(85, 179, 23);
+        }
+    }
+    .logo {
+        top: 50px;
+        img {
+            width: 60%;
+        }
+    }
+}
