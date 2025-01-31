@@ -1,9 +1,10 @@
-import React, {useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import { useNavigate } from 'react-router'
 import useStore from '../contexts/useStore'
 
 import '../assets/login.css'
 import logo from '/logo_pokemon.svg'
+import background_sound from '/PokemonIChooseYou_soundtrack.mp3'
 
 function Login() {
 
@@ -19,6 +20,7 @@ function Login() {
   return (
     <>
     <div className="img-background ">
+      <audio src={background_sound} type='audio/mpeg' autoPlay loop></audio>
       <img className='kenburns-bottom' src='/public/imgs/background.jpg' alt="background" />
     </div>
     <div className='gras-background'>
@@ -32,7 +34,7 @@ function Login() {
       <div className="login__card">
         <div className="card-text">
           <h1>Hola entrenador!</h1>
-          <p>Bienvenido a la Pokdex</p>
+          <p>Bienvenido a la Pokdex Web</p>
           <p>Por favor escribe tu nombre.</p>
           <button className='button-transparent b-left'>.</button>
           <button className='button-transparent b-right'>.</button>

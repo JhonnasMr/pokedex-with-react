@@ -9,9 +9,11 @@ import Cards from './cards'
 
 function Pokedex() {
 
-  const userName = useStore((e) => e.userName)
-  const globalData = useStore((e) => e.data)
-  const setGlobalData = useStore((e) => e.setData)
+  const userName = useStore(e => e.userName)
+  const globalData = useStore(e => e.data)
+  const setGlobalData = useStore(e => e.setData)
+
+  const dataSearch = useStore(e => e.search.searchByName)
 
   const url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0'
   const {data, error, isPending, getData} = useFetchApi()
@@ -29,14 +31,16 @@ function Pokedex() {
       <Header/>
       <h3>Bienvenido {userName}, aqui podras encontrar a tu Pokemon favorito!</h3>
       <SearchBar />
-      {
-        isPending ? <h1>Loading...</h1>
-        : globalData?.results && <Cards data={globalData.results}/>
-      }
-      
-      <pre>
-        {JSON.stringify(globalData, null, 2)}
-      </pre>
+      <main>
+        {
+          !dataSearch ?
+            isPending ? <h1>Loading...</h1>
+            : globalData?.results ? <Cards data={globalData.results}/>
+            : globalData?.pokemon ? <Cards data={globalData}/>
+            : <Cards data={globalData}/>
+          :dataSearch && <Cards pokemon={dataSearch}/>
+        }
+      </main>
     </>
   )
 }

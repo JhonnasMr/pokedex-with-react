@@ -20,6 +20,7 @@ function useFetchApi() {
     // })
   
      const getData = async (url) => {
+        setError(null)
         setIsPending(true)
         try {
             const res = await axios(url)

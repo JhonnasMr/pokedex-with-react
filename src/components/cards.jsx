@@ -1,17 +1,20 @@
-import React from 'react'
+import React, {memo} from 'react'
 import Card from './card.jsx'
 
-function Cards({data}) {
-  console.log(data)
-  return (
-    <>
+function Cards({data, pokemon}) {
+  if (data) {
+    return (<>
       {
-        data.map((e, index) => {
-          return <Card key={Date.now()+index} name={e.name} link={e.url}/>
-        })
+        data.map((e, index) => <Card key={Date.now()+index} link={e.url}/>)
       }
-    </>
-  )
+    </>)
+  } else {
+    return (<>
+        {
+          pokemon && <Card key={Date.now()} pokemonObj={pokemon}/>
+        }
+      </>)
+  }
 }
 
-export default Cards
+export default memo(Cards)

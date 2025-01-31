@@ -5,10 +5,10 @@ const  useStore = create((set) => ({
     theme : 'light',
     data : [],
     search : {
-        searchType : '',
-        lastSearch : '',
+        searchType : null,
+        lastSearch : null,
         searchByID : null,
-        searchByName : ''
+        searchByName : null
     },
     singlePokemon : null,
     setUserName : (nameInput) => set((state) => ({...state, userName : nameInput})),
