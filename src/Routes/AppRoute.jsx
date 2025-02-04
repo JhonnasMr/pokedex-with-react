@@ -22,7 +22,7 @@ function AppRoute() {
           <Route 
             path='/pokedex/:id'
             element={
-              <ProtectedComponent>
+            <ProtectedComponent>
               <CardDetails/>
             </ProtectedComponent>
           }/>

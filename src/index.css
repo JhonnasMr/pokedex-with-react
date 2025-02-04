@@ -1,25 +1,14 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  --color-primary : 
-
+  background-color: var(--background);
+  --shadow-md: 5px 5px 0px 5px rgba(0,0,0,0.85);
 }
 
 a {
   text-decoration: none;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 *, *::after, *::before {
@@ -28,6 +17,33 @@ body {
   box-sizing: border-box;
 }
 
+[data-theme="dark"] {
+  --color-primary : #e2e2e2;
+  --color-secondary: #e2e2e2;
+  --color-grey: #7e7e7e;
+  --color-blue: #3760aa;
+  --color-dark-red: #000000;
+
+  --background: #1b1b31;
+  --text-color: white;
+  --bg-color: #1b1b31be;
+  --bg-navbar: #000000;
+  --bg-pokedex: #dc0a2d;
+}
+
+[data-theme="light"] {
+  --color-primary : #333333;
+  --color-secondary: #e2e2e2;
+  --color-grey: #7e7e7e;
+  --color-blue: #3760aa;
+  --color-dark-red: #d23e34;
+
+  --background: #e2e2e2;
+  --text-color: #161616;
+  --bg-color: #dbdbdbcc;
+  --bg-navbar: #d23e34;
+  --bg-pokedex: #dc0a2d;
+}
 
 /* animations */
 .wobble-ver-left {

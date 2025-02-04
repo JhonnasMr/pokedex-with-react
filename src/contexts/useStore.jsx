@@ -15,7 +15,7 @@ const  useStore = create((set) => ({
     setTheme : () => set((state) => state.theme =='light'? {...state, theme:'dark'}:{...state, theme:'light'}),
     setData : (newData) => set((state) => ({...state, data: newData})),
     setSinglePokemon : (newData) => set({...state, singlePokemon : newData}),
-    setSearch : (ste, value) => set((state) => ({...state, search : {...state.search, [`${ste}`]: value}})) 
+    setSearch : (ste, value) => set((state) => ({...state, search : {...state.search, [`${ste}`]: value}})),
 }))
 
 export default useStore
