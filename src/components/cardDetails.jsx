@@ -72,10 +72,7 @@ function CardDetails() {
                     data.sprites.other.showdown.front_shiny || data.sprites.front_default
                   : data.sprites.other.showdown.front_default || data.sprites.front_shiny} 
                 alt="window" />
-                <h3 style={{color: getColor(data.types[0].type.name).color}}> {data?.name}</h3>
-                <div className="types">
-                  {data.types.map((e, index) => <span key={Date.now()+index}>-{e.type.name}-</span> )}
-                </div>
+                <h4 style={{color: getColor(data.types[0].type.name).color}}> {data?.name}</h4>
               </div>
             </div>
 
@@ -84,9 +81,9 @@ function CardDetails() {
                 <p>Height : {data.height}</p>
                 <p>Weight : {data.weight}</p>
                 <p>Abilities :</p>
-                {data.abilities.map((e, index) => <span key={Date.now()+index}>-{e.ability.name}-</span> )}
+                {data.abilities.map((e, index) => <span key={Date.now()+index}>{e.ability.name}-</span> )}
                 <p>type :</p>
-                {data.types.map((e, index) => <span key={Date.now()+index}>-{e.type.name}-</span> )}
+                {data.types.map((e, index) => <span key={Date.now()+index}>{e.type.name}-</span> )}
               </div>
               <div className="window-meta-col2">
                 <div className="progress__container">

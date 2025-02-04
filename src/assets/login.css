@@ -57,21 +57,22 @@
 .logo {
     position: absolute;
     z-index: 1;
-    top: 15%;
+    top: 10%;
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
     img {
         width: 80%;
-        max-width: 700px;
+        max-width: 650px;
     }
 }
 
 .login__card {
-    max-width: 90%;
+    max-width: 85%;
     border: 5px solid #638bae;
     border-radius: 20px;
+    font-size: .8rem;
     background-color: #ffffff;
 }
 
@@ -134,7 +135,7 @@
 /* pokemons  */
 .bulbasaur {
     position: absolute;
-    width: 130px;
+    width: 100px;
     bottom: 3%;
     transform: rotate(10deg);
     left: 38%;
@@ -143,7 +144,7 @@
 
 .charmeleon {
     position: absolute;
-    width: 130px;
+    width: 100px;
     transform: rotate(-10deg);
     bottom: 3%;
     left: 10%;
@@ -151,7 +152,7 @@
 
 .esqueerow {
     position: absolute;
-    width: 130px;
+    width: 100px;
     transform: rotatey(-180deg) rotate(-10deg);
     bottom: 3%;
     right: 10%;
@@ -168,12 +169,12 @@
 .meow {
     position: absolute;
     rotate: 30deg;
-    width: 150px;
-    top: 9%;
-    left: -5%;
+    width: 130px;
+    top: 4%;
+    left: -3%;
 }
 .picachu {
-    width: 150px;
+    width: 130px;
     position: absolute;
     bottom: 20%;
     left: 36%;
@@ -240,5 +241,9 @@
         img {
             width: 60%;
         }
+    }
+    .login__card {
+        max-width: 100%;
+        font-size: 1rem;
     }
 }

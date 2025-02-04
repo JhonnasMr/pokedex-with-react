@@ -32,7 +32,7 @@ function Login() {
       </div>
       <div className="login__card">
         <SquareDialog>
-          <h1>Hola entrenador!</h1>
+          <h2>Hola entrenador!</h2>
           <p>Bienvenido a la Pokdex Web</p>
           <p>Por favor escribe tu nombre.</p>
         </SquareDialog>

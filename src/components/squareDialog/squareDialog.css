@@ -12,7 +12,7 @@
 }
 .button-transparent {
     position: absolute;
-    padding: 0 15px;
+    padding: 0 20px;
     border: 3px solid #918c92;
     border-radius: 5px;
     background-color: transparent;

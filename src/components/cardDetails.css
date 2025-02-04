@@ -9,11 +9,11 @@
 
     .pokedex__container {
         height: 80%;
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         border-radius: 15px;
         background: #680415;
-        box-shadow: 5px 5px 0px 5px #680415;
+        box-shadow: 3px 3px 0px 3px #680415;
 
         .pokedex-header{
             display: flex;
@@ -119,12 +119,12 @@
 
         .pokedeex__body{
             position: relative;
-            padding-top: 5rem;
+            padding-top: 4rem;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 2rem;
+            justify-content: space-evenly;
+            /* gap: 2rem; */
             top: -4.3rem;
             height: 88%;
             width: 100%;
@@ -138,7 +138,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 48%;
+                min-height: 200px;
                 width: 90%;
                 background-color: #dddfdf;
                 border: 2px solid #000;
@@ -156,13 +156,17 @@
                     border-radius: 10px;
                     background-color: #000;
                     overflow: hidden;
-                    h3 {
-                        font-size: 1.5rem;
+                    h4 {
+                        position: absolute;
+                        bottom: 40px;
+                        font-size: 1rem;
                         background-color: #51ae5e;
+                        border-radius: 10px;
                         padding: 0 10px;
                     }
                     span {
                         margin-left: .5rem;
+                        font-size: .7rem;
                     }
                 }
                 .points-red {
@@ -175,10 +179,10 @@
                 }
                 .triple-line {
                     position: absolute;
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     color: #000;
                     bottom: 5px;
-                    right: 10px;
+                    right: 5px;
                 }
                 .uno{
                     top: 10px;
@@ -188,7 +192,7 @@
                     top: 10px;
                 }
                 .tres{
-                    bottom: 10px;
+                    bottom: 5px;
                     left: 20%;
                     height: 20px;
                     width: 20px;
