@@ -21,11 +21,7 @@ function AppRoute() {
 
           <Route 
             path='/pokedex/:id'
-            element={
-            <ProtectedComponent>
-              <CardDetails/>
-            </ProtectedComponent>
-          }/>
+            element={<CardDetails/>}/>
         </Route>
 
     </Routes>

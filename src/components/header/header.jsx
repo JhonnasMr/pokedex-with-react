@@ -2,11 +2,12 @@ import React from 'react'
 import './header.css'
 
 import useTheme from '../../hooks/useTheme'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 
 function Header() {
 
   const {theme, toggleTheme} = useTheme()
+  const navigate = useNavigate()
 
   return (
     <>
@@ -20,6 +21,11 @@ function Header() {
           <div className="ball-black">
           <i class={`bx bx-${theme=='light'?'moon':'sun'}`}></i>
           </div>
+        </div>
+        <div className="header__btn-leave">
+          <button onClick={() => navigate('/')} type='button'>
+            <i class='bx bx-exit' ></i>
+          </button>
         </div>
       </header>
     </>

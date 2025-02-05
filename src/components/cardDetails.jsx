@@ -14,7 +14,7 @@ function CardDetails() {
 
   const [showShiny, setShowShiny] = useState(false)
   const navigate = useNavigate()
-
+  
   const handleAudio = () => {
     const pokemonDom = document.querySelector('.pokedex-window__img')
     pokemonDom.classList.add('movin')
